@@ -34,7 +34,7 @@ const Nav = ({ menuOpen, setMenuOpen }) => {
           className={"logo " + (menuOpen && "menuActive")}
           onClick={() => scroll.scrollToTop()}
         >
-          &lt; Junaid /&gt;
+          &lt; Altamash /&gt;
         </span>
 
         <MenuIcon handleClick={handleClick} menuOpen={menuOpen} />

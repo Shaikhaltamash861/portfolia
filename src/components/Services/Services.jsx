@@ -6,7 +6,7 @@ import "./services.css";
 // Card
 import { ServicesCard } from "components/Services/ServicesCard/ServicesCard";
 import { Heading } from "components/Heading/Heading";
-
+import tmpSer from '../../data.js'
 const Services = ({ services }) => {
   return (
     <section
@@ -18,7 +18,7 @@ const Services = ({ services }) => {
       <Heading text="Services" />
       <div className="services-cards">
         {services &&
-          services?.map(({ title, icon, tags }, index) => (
+          tmpSer?.map(({ title, icon, tags }, index) => (
             <ServicesCard
               key={index}
               image={icon.asset.url}

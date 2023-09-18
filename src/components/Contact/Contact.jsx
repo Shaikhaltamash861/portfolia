@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import "./contact.css";
 
 // Email Js
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
 // image
 import shakeImage from "../../images/shake.svg";
@@ -23,17 +23,12 @@ const Contact = () => {
   const form = useRef();
 
   const sendEmail = async () => {
-    try {
-      const result = await emailjs.sendForm(
-        `gmail`,
-        `emailjs`,
-        form.current,
-        `user_Ar1zI6cvC6aUG82I1aNsA`
-      );
-      console.log("result ", result.text);
-    } catch (error) {
-      console.log("ERROR", error);
-    }
+    emailjs.sendForm('service_i0emmp5', 'template_73t8qhi', form.current, 'PT9ECovT3jIIJ_McV')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
   };
   // Email-js
 

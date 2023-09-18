@@ -67,6 +67,7 @@ function App() {
           } else if (doc.liveUrl) {
             // It is a project
             tempProjects.push(doc)
+            console.log(doc)
           } else {
             tempServices.push(doc)
           }
@@ -91,7 +92,7 @@ function App() {
       <Home />
       <Services services={services} />
       <Portfolio projects={projects} />
-      <Testimonials testimonials={testimonials} />
+      {/* <Testimonials testimonials={testimonials} /> */}
       <Contact />
       <Footer />
     </div>

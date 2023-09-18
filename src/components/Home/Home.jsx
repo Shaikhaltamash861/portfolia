@@ -38,14 +38,14 @@ const Home = () => {
         animate="animate"
       >
         <h2>Hi Devs!</h2>
-        <h1>I’m Junaid</h1>
+        <h1>I’m Mohammad Altamash</h1>
         <p>
-          I am a
+          I am 
           <span
             style={{ fontSize: "1.5rem ", fontWeight: "600", marginLeft: "2%" }}
           >
             <Typed
-              strings={["Full Stack Developer", "Level One Seller at Fiverr"]}
+              strings={["MERN Stack Developer"]}
               typeSpeed={50}
               backSpeed={50}
               loop

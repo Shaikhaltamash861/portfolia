@@ -14,8 +14,8 @@ import { faGithubSquare } from "@fortawesome/free-brands-svg-icons/faGithubSquar
 import { faUserLock } from "@fortawesome/free-solid-svg-icons/faUserLock"
 
 import PortfolioItem from "./PortfolioItem/PortfolioItem"
-
-const Portfolio = ({ projects }) => {
+import { projects } from "data"
+const Portfolio = ({}) => {
   const [selected, setSelected] = useState("featured")
   const [data, setData] = useState([])
   const [projectList, setProjectList] = useState([])
