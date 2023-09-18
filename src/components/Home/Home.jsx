@@ -1,6 +1,6 @@
 import React from "react"
 import Typed from "react-typed"
-
+import resume from '../../images/Software.pdf'
 // SVG
 import man from "images/dev.svg"
 
@@ -52,18 +52,21 @@ const Home = () => {
             />
           </span>
         </p>
-        <Link
+        {/* <Link
           // className="home-btn"
-          to={"portfolio"}
+          to={resume}
           hashSpy={true}
           spy={true}
           smooth={true}
           delay={100}
           offset={-100}
           duration={500}
-        >
-          <Button text={"See my work"} type="submit" />
-        </Link>
+        > */}
+        <a href={resume}>
+
+          <Button text={"Resume"} type="submit" />
+        </a>
+        {/* </Link> */}
       </motion.div>
 
       <motion.div
