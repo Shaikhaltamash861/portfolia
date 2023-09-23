@@ -15,7 +15,7 @@ import { faUserLock } from "@fortawesome/free-solid-svg-icons/faUserLock"
 
 import PortfolioItem from "./PortfolioItem/PortfolioItem"
 import { projects } from "data"
-const Portfolio = ({}) => {
+const Portfolio = ({projects}) => {
   const [selected, setSelected] = useState("featured")
   const [data, setData] = useState([])
   const [projectList, setProjectList] = useState([])
@@ -33,12 +33,10 @@ const Portfolio = ({}) => {
   }, [projects])
 
   useEffect(() => {
-    setData(projects)
     projectList.map((list) => {
       if (selected === list) {
         setData(projects.filter((project) => project.category === list))
       }
-      
 
       return null
     })
@@ -52,7 +50,7 @@ const Portfolio = ({}) => {
       id="portfolio"
     >
       <Heading text="Portfolio" style={{ padding: "3rem" }} />
-      {/* <div className="list">
+      <div className="list">
         {projectList &&
           projectList.map((list) => (
             <PortfolioItem
@@ -63,9 +61,9 @@ const Portfolio = ({}) => {
               id={list}
             />
           ))}
-      </div> */}
+      </div>
       <div className="row">
-        {
+        {data.length &&
           data.map((item, index) => (
             <div className="column" key={index}>
               <img src={item?.img.asset.url} alt={item.title} />
