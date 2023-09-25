@@ -15,6 +15,8 @@ import sanityClient from "client"
 // Animation
 import Aos from "aos"
 import "aos/dist/aos.css"
+import { Router } from "react-router-dom/cjs/react-router-dom"
+import { Route } from "react-router-dom/cjs/react-router-dom.min"
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)

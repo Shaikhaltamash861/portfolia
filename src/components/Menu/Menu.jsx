@@ -28,6 +28,11 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
           path="contact"
           onClick={() => setMenuOpen(false)}
         />
+        <NavLink
+          text="Admin"
+          path="contact"
+          onClick={() => setMenuOpen(false)}
+        />
       </ul>
     </div>
   );
